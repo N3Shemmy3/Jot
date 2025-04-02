@@ -43,7 +43,7 @@ const kanji = ref("やってみて！");
         <NuxtImg
           src="/screenshot.png"
           alt="image"
-          class="w-full md:max-w-screen-sm object-contain rounded-[--radius] aspect-video transition-all duration-300"
+          class="w-full md:max-w-screen-lg object-contain rounded-[--radius] aspect-video transition-all duration-300"
           :custom="true"
           v-slot="{ src, isLoaded, imgAttrs }"
         >
@@ -54,7 +54,7 @@ const kanji = ref("やってみて！");
             v-else
             alt="placeholder"
             :v-bind="imgAttrs"
-            class="w-full md:max-w-screen-sm aspect-video bg-secondary rounded-[--radius] flex items-center justify-center"
+            class="w-full md:max-w-screen-lg aspect-video bg-secondary rounded-[--radius] flex items-center justify-center"
           >
             <LucideLoaderCircle
               class="size-8 text-muted-foreground animate-spin"
