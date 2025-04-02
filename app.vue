@@ -26,9 +26,10 @@ onMounted(() => {
 </script>
 
 <template>
-  <div ref="content" class="w-full flex flex-col overflow-y-scroll">
+  <div ref="root" class="w-full h-dvh overflow-y-scroll">
+    <Grid class="fixed -z-50 left-0 top-0 right-0 bottom-0" />
     <Topbar :isLifted="y > 50" />
-    <main class="w-full h-full pt-14 max-w-screen-xl mx-auto">
+    <main class="pt-14 max-w-screen-xl mx-auto xl:border">
       <NuxtPage />
     </main>
     <CommandDialog v-model:open="open">

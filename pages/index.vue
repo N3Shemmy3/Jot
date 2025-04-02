@@ -29,10 +29,12 @@ const kanji = ref("やってみて！");
             Jot down your thoughts, and let them follow you wherever you go.
           </p>
           <div class="flex gap-4 items-center justify-center">
-            <Button class="w-fit mt-6 rounded-full" @click="toggleCommand()">
-              <p>Start Taking Notes</p>
-              <LucideArrowRight class="size-6" />
-            </Button>
+            <NuxtLink to="/auth/signup">
+              <Button variant="outline" class="w-fit mt-6 rounded-full">
+                <p>Start Taking Notes</p>
+                <LucideArrowRight class="size-6" />
+              </Button>
+            </NuxtLink>
           </div>
         </div>
       </div>

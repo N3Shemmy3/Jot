@@ -57,6 +57,6 @@
   }
   body {
     font-family: "JetBrains Mono", monospace;
-    @apply 2xl:dark  bg-background text-muted-foreground;
+    @apply dark scroll-smooth bg-background text-muted-foreground;
   }
 }
