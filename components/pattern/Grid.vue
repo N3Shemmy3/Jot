@@ -15,6 +15,6 @@
       theme("colors.border") 0 1px,
       transparent 1px 100%
     );
-  background-size: 28px 28px;
+  background-size: 24px 24px;
 }
 </style>

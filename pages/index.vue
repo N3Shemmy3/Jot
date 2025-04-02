@@ -4,7 +4,6 @@ const { $event } = useNuxtApp();
 const toggleCommand = () => {
   $event("toggleCommand");
 };
-const kanji = ref("やってみて！");
 </script>
 <template>
   <div class="flex flex-col gap-4">

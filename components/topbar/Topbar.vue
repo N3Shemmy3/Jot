@@ -22,7 +22,7 @@ const toggleCommand = () => {
 
 <template>
   <header
-    class="z-20 fixed left-0 top-0 right-0 flex items-center transition-all duration-300"
+    class="z-20 fixed left-0 top-0 right-0 h-12 flex items-center transition-all duration-300"
     :class="{
       'shadow-sm border-b-[.5px] border-opacity-30 backdrop-blur-xl':
         props.isLifted,

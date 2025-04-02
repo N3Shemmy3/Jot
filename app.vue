@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type MenuItem from "./types/Menu";
+import Grid from "./components/pattern/Grid.vue";
 const { $listen } = useNuxtApp();
 const root = ref<HTMLElement>();
 const { x, y } = useScroll(root);
