@@ -4,7 +4,7 @@
     class="pattern pointer-events-none opacity-35"
   ></div>
 </template>
-<style scoped>
+<style>
 .pattern {
   background-image: repeating-linear-gradient(
       theme("colors.border") 0 1px,

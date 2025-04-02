@@ -56,7 +56,6 @@
     @apply border-border;
   }
   body {
-    font-family: "JetBrains Mono", monospace;
     @apply dark scroll-smooth bg-background text-muted-foreground;
   }
 }

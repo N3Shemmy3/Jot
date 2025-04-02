@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type MenuItem from "./types/Menu";
-import Grid from "./components/pattern/Grid.vue";
 const { $listen } = useNuxtApp();
 const root = ref<HTMLElement>();
 const { x, y } = useScroll(root);
@@ -30,9 +29,10 @@ onMounted(() => {
   <div ref="root" class="w-full h-dvh overflow-y-scroll">
     <Grid class="fixed -z-50 left-0 top-0 right-0 bottom-0" />
     <Topbar :isLifted="y > 50" />
-    <main class="pt-14 max-w-screen-xl mx-auto xl:border">
+    <main class="pt-14 max-w-screen-xl mx-auto">
       <NuxtPage />
     </main>
+
     <CommandDialog v-model:open="open">
       <CommandInput placeholder="Type a command or search..." />
       <CommandList>
