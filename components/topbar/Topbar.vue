@@ -37,9 +37,7 @@ const toggleCommand = () => {
           to="/"
           class="cursor-pointer transition-colors duration-300 text-foreground hover:text-muted-foreground"
         >
-          <h4 class="scroll-m-20 text-xl font-semibold tracking-tight">
-            Notsu
-          </h4>
+          <h4 class="scroll-m-20 text-xl font-semibold tracking-tight">Jot</h4>
         </NuxtLink>
       </div>
       <!-- Desktop nav-->

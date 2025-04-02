@@ -20,12 +20,13 @@ const toggleCommand = () => {
   open.value = !open.value;
 };
 
-onMounted(() => {});
-$listen("toggleCommand", toggleCommand);
+onMounted(() => {
+  $listen("toggleCommand", toggleCommand);
+});
 </script>
 
 <template>
-  <div ref="content" class="w-full flex flex-col overflow-scroll">
+  <div ref="content" class="w-full flex flex-col overflow-y-scroll">
     <Topbar :isLifted="y > 50" />
     <main class="w-full h-full pt-14 max-w-screen-xl mx-auto">
       <NuxtPage />
