@@ -26,11 +26,15 @@ import { LucidePlus } from "lucide-vue-next";
       <LazyCard
         v-for="n in 100"
         :key="n"
-        class="relative w-full h-full transition-all duration-300 hover:shadow hover:bg-background cursor-pointer"
+        class="relative w-full h-full group transition-all duration-300 hover:shadow hover:bg-background cursor-pointer"
       >
-        <Button variant="ghost" class="absolute right-0 top-0 m-4 py-1 px-2"
-          ><LucideInfo
-        /></Button>
+        <Button
+          :id="n + '-button'"
+          variant="ghost"
+          class="absolute right-4 top-4 hidden h-8 w-8 p-0 transition-all duration-1000 group-hover:md:flex"
+        >
+          <LucideTrash class="w-4 h-4" />
+        </Button>
         <CardHeader class="flex-row justify-between items-center p-6">
           <CardTitle class="m-0 text-[1.2rem]">Note title</CardTitle>
         </CardHeader>
@@ -45,9 +49,10 @@ import { LucidePlus } from "lucide-vue-next";
       </LazyCard>
     </ul>
     <Button
-      class="md:hidden fixed bottom-4 right-4 py-1 px-2 size-16 rounded-xl"
+      id="fab"
+      class="md:hidden fixed bottom-4 right-4 py-1 px-2 size-14 rounded-xl"
     >
-      <LucidePlus :size="24" />
+      <LucidePlus class="p-0" />
     </Button>
   </div>
 </template>

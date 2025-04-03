@@ -16,5 +16,6 @@
       transparent 1px 100%
     );
   background-size: 24px 24px;
+  background-attachment: fixed;
 }
 </style>

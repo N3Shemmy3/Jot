@@ -34,19 +34,13 @@ onMounted(() => {
     </main>
 
     <CommandDialog v-model:open="open">
-      <CommandInput placeholder="Type a command or search..." />
+      <CommandInput placeholder="search..." class="flex items-center" />
       <CommandList>
         <CommandEmpty>No results found.</CommandEmpty>
-        <CommandGroup heading="Suggestions">
+        <CommandGroup heading="">
           <CommandItem value="calendar"> Calendar </CommandItem>
           <CommandItem value="search-emoji"> Search Emoji </CommandItem>
           <CommandItem value="calculator"> Calculator </CommandItem>
-        </CommandGroup>
-        <CommandSeparator />
-        <CommandGroup heading="Settings">
-          <CommandItem value="profile"> Profile </CommandItem>
-          <CommandItem value="billing"> Billing </CommandItem>
-          <CommandItem value="settings"> Settings </CommandItem>
         </CommandGroup>
       </CommandList>
     </CommandDialog>

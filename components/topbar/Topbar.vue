@@ -32,7 +32,7 @@ const toggleCommand = () => {
       class="w-full py-2 max-w-screen-xl mx-auto flex items-center justify-between px-4 md:px-8"
     >
       <!-- Logo-->
-      <div id="logo" class="flex items-center">
+      <div id="logo" class="flex items-center gap-4">
         <NuxtLink
           to="/"
           class="cursor-pointer transition-colors duration-300 text-foreground hover:text-muted-foreground"
@@ -40,6 +40,26 @@ const toggleCommand = () => {
           <h4 class="scroll-m-20 text-xl font-semibold tracking-tight">Jot</h4>
         </NuxtLink>
       </div>
+
+      <!--Desktop Search bar -->
+      <div
+        v-if="$route.path.includes('notes')"
+        class="hidden md:flex items-center w-full mx-4 md:ms-24 max-w-md"
+      >
+        <Button
+          id="toggle-command-desktop"
+          variant="outline"
+          class="relative w-full max-w-md items-center"
+          @click="toggleCommand"
+        >
+          <span>Search notes </span>
+          <CommandShortcut
+            class="px-2 py-1 rounded bg-card text-card-foreground"
+            >⌘K</CommandShortcut
+          >
+        </Button>
+      </div>
+
       <!-- Desktop nav-->
       <NavigationMenu id="desktop-nav" class="flex gap-4">
         <NavigationMenuList class="hidden md:flex gap-4">
@@ -67,6 +87,17 @@ const toggleCommand = () => {
           </NavigationMenuItem>
         </NavigationMenuList>
 
+        <Button
+          id="toggle-command-mobile"
+          variant="outline"
+          @click="toggleCommand"
+          class="md:hidden aspect-square"
+        >
+          <LucideSearch
+            class="w-4 h-4 text-muted-foreground"
+            aria-hidden="true"
+          />
+        </Button>
         <Avatar class="border cursor-pointer aspect-square size-8 p-0">
           <AvatarImage src="/avatar.jpg" alt="@unovue" />
           <AvatarFallback>SN</AvatarFallback>
