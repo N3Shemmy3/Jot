@@ -27,7 +27,10 @@ onMounted(() => {
 
 <template>
   <div ref="root" class="w-full h-dvh overflow-y-scroll">
-    <Grid class="fixed -z-50 left-0 top-0 right-0 bottom-0" />
+    <Grid
+      class="fixed -z-50 left-0 top-0 right-0 bottom-0"
+      :class="{ 'blur-[2px]': $route.path != '/' }"
+    />
     <Topbar :isLifted="y > 50" />
     <main class="pt-14 max-w-screen-xl mx-auto">
       <NuxtPage />

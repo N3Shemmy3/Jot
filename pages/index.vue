@@ -25,13 +25,12 @@ const toggleCommand = () => {
           class="md:max-w-screen-sm flex flex-col justify-center text-center py-[10vh]"
         >
           <h1
-            class="text-foreground scroll-m-20 text-3xl md:text-5xl lg:text-6xl font-extrabold tracking-tight"
+            class="text-foreground scroll-m-20 text-3xl md:text-5xl lg:text-6xl font-extrabold tracking-tight rounded"
           >
             The
-            <span
-              class="transitiona-all duration-1000 hover:italic hover:font-[]"
-              >simplest</span
-            >
+            <span class="transition-all duration-300 hover:text-primary">
+              simplest
+            </span>
             way <br />
             to keep notes
           </h1>
@@ -40,7 +39,10 @@ const toggleCommand = () => {
           </p>
           <div class="flex gap-4 items-center justify-center">
             <NuxtLink to="/auth/signup">
-              <Button variant="outline" class="w-fit mt-6 rounded-full">
+              <Button
+                variant="outline"
+                class="w-fit mt-6 rounded-full hover:bg-primary hover:text-primary-foreground animate-fill-both hover:animate-pulse"
+              >
                 <p>Start taking notes</p>
                 <LucideArrowRight class="size-6" />
               </Button>
@@ -55,6 +57,7 @@ const toggleCommand = () => {
         <NuxtImg
           src="/screenshot.png"
           alt="image"
+          format="webp"
           class="w-full md:max-w-screen-lg object-contain rounded-[--radius] aspect-video transition-all duration-300"
           :custom="true"
           v-slot="{ src, isLoaded, imgAttrs }"

@@ -99,7 +99,7 @@ const toggleCommand = () => {
           />
         </Button>
         <Avatar class="border cursor-pointer aspect-square size-8 p-0">
-          <AvatarImage src="/avatar.jpg" alt="@unovue" />
+          <AvatarImage src="/avatar.jpg" alt="@unovue"> </AvatarImage>
           <AvatarFallback>SN</AvatarFallback>
         </Avatar>
       </NavigationMenu>

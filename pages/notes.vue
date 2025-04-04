@@ -35,15 +35,15 @@ import { LucidePlus } from "lucide-vue-next";
         >
           <LucideTrash class="w-4 h-4" />
         </Button>
-        <CardHeader class="flex-row justify-between items-center p-6">
-          <CardTitle class="m-0 text-[1.2rem]">Note title</CardTitle>
+        <CardHeader class="flex-row justify-between items-center p-4">
+          <CardTitle class="m-0 text-[1.2rem] font-semibold"
+            >Note title</CardTitle
+          >
         </CardHeader>
-        <CardContent>
+        <CardContent class="px-4">
           <p class="text-pretty font-medium leading-[1.25]">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
-            consequatur molestiae repellendus eveniet numquam provident
-            similique ad recusandae labore asperiores, vero consectetur. Odio
-            recusandae voluptatibus earum, quis enim exercitationem vitae.
+            Make a pretty sizeable codeview with the hello there text in the
+            center in it
           </p>
         </CardContent>
       </LazyCard>

@@ -18,7 +18,7 @@ const onSubmit = form.handleSubmit((values) => {
 
 <template>
   <Section class="md:flex-row gap-4 *:px-4 *:md:p-8 *:md:-mt-14">
-    <div class="hidden md:flex w-full h-full bg-muted">
+    <div class="hidden md:flex w-full h-full bg-muted xl:bg-transparent">
       <div class="mt-auto xl:my-auto xl:pt-[10vh]">
         <h1
           class="text-foreground scroll-m-20 text-3xl md:text-5xl lg:text-6xl font-extrabold tracking-tight"
