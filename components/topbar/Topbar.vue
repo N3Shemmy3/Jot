@@ -7,6 +7,7 @@ const props = defineProps({
     default: false,
   },
 });
+const user = useCookie("loggedInUser").value; // Retrieve the user from cookies
 
 const menu = ref<MenuItem[]>([
   { title: "notes", path: "/notes" },
@@ -85,6 +86,26 @@ const toggleCommand = () => {
               </NavigationMenuLink>
             </NuxtLink>
           </NavigationMenuItem>
+          <NavigationMenuItem>
+            <NuxtLink
+              v-if="!user && $route.path !== '/auth'"
+              v-slot="{ isActive, href, navigate }"
+              to="/auth"
+              custom
+            >
+              <NavigationMenuLink
+                :active="isActive"
+                :href
+                @click="navigate"
+                class="transition-colors duration-300 hover:text-foreground"
+                :class="{
+                  'text-foreground': isActive,
+                }"
+              >
+                Sign in
+              </NavigationMenuLink>
+            </NuxtLink>
+          </NavigationMenuItem>
         </NavigationMenuList>
 
         <Button
@@ -98,7 +119,10 @@ const toggleCommand = () => {
             aria-hidden="true"
           />
         </Button>
-        <Avatar class="border cursor-pointer aspect-square size-8 p-0">
+        <Avatar
+          v-if="user"
+          class="border cursor-pointer aspect-square size-8 p-0"
+        >
           <AvatarImage src="/avatar.jpg" alt="@unovue"> </AvatarImage>
           <AvatarFallback>SN</AvatarFallback>
         </Avatar>

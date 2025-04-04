@@ -1,5 +1,7 @@
 <script setup lang="ts">
-import { LucidePlus } from "lucide-vue-next";
+definePageMeta({
+  middleware: "notes", // Apply the auth middleware to this page
+});
 </script>
 
 <template>

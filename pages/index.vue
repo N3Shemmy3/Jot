@@ -38,10 +38,10 @@ const toggleCommand = () => {
             Jot down your thoughts, and let them follow you wherever you go.
           </p>
           <div class="flex gap-4 items-center justify-center">
-            <NuxtLink to="/auth/signup">
+            <NuxtLink to="/notes">
               <Button
                 variant="outline"
-                class="w-fit mt-6 rounded-full hover:bg-primary hover:text-primary-foreground animate-fill-both hover:animate-pulse"
+                class="w-fit mt-6 rounded-full hover:bg-primary hover:text-primary-foreground"
               >
                 <p>Start taking notes</p>
                 <LucideArrowRight class="size-6" />

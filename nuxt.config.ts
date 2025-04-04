@@ -22,4 +22,10 @@ export default defineNuxtConfig({
     prefix: "",
     componentDir: "./components/ui",
   },
+  runtimeConfig: {
+    phpServerUrl: process.env.PHP_SERVER_URL || "http://localhost/Notes/", // Default value
+    public: {
+      phpServerUrl: process.env.PHP_SERVER_URL || "http://localhost/Notes/", // Expose to client-side
+    },
+  },
 });
