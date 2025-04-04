@@ -1,5 +1,5 @@
 <?php
-include_once('./src/Responses.php');
+include('./src/Responses.php');
 // Database connection details
 $servername = "localhost";
 $username = "root";

@@ -1,6 +1,6 @@
 <?php
-include_once('./Connection.php');
-include_once('./Responses.php');
+include('./Connection.php');
+include('./Responses.php');
 
 // Function to handle user signup
 function signup($username, $password)

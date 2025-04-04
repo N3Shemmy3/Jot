@@ -1,6 +1,5 @@
 <?php
-include_once('./src/Auth.php');
-include_once('./src/Responses.php');
+include('./src/Auth.php');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $action = $_POST['action'];
